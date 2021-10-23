@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  color: black;
+}
+
+.main {
+  position: relative;
+  padding-right: 10px;
+  padding-top: 5px;
+  margin-top: 65px;
+  height: 2000px;
+  border-top: solid 1px rgb(222, 222, 222);
+  background-color: rgb(250, 250, 250);
+
+  .feeds {
+    margin-top: 40px;
+    margin-left: 3%;
+    width: 400px;
+    border: rgb(220, 220, 220) solid 1px;
+    border-radius: 3px;
+    background-color: white;
+
+    .topProfile {
+      display: flex;
+
+      .topProfileCat {
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .topProfileText {
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      .dots {
+        position: absolute;
+        margin-left: 365px;
+        top: 54px;
+        font-size: 25px;
+      }
+    }
+    .article {
+      position: relative;
+      margin: 10px -1px 0px -1px;
+      height: 498px;
+      border: rgb(220, 220, 220) solid 1px;
+
+      .cat {
+        width: 398px;
+        height: 498px;
+      }
+
+      .bottomIcons {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px;
+        margin-left: -3px;
+        .bottomLeft {
+          margin-left: 8px;
+
+          .fas.fa-heart {
+            color: #d14246;
+            font-size: 20px;
+            margin-right: 5px;
+          }
+
+          .fas.fa-upload,
+          .far.fa-comment {
+            color: rgb(140, 140, 140);
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+
+        .bottomRight {
+          margin-right: 13px;
+          margin-top: 4px;
+
+          .far.fa-bookmark {
+            color: rgb(140, 140, 140);
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .comment {
+      margin-top: 40px;
+
+      .bottomProfileCat {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+
+      .likeComment {
+        display: block;
+        margin: -22px -20px 0px 30px;
+        font-size: 12px;
+      }
+
+      .bord {
+        font-weight: bolder;
+      }
+    }
+
+    .commentOut {
+      margin: 3px 0px 3px 10px;
+      font-size: 12px;
+
+      .commentWrite {
+        list-style-type: none;
+        margin-left: -30px;
+      }
+    }
+
+    .commentBox {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      height: 50px;
+      border-top: solid 1px rgb(222, 222, 222);
+    }
+
+    .commentIn {
+      text-align: left;
+      padding-left: 10px;
+      width: 340px;
+      outline: none;
+      border: none;
+    }
+
+    .commentButton {
+      border: none;
+      background-color: white;
+      color: rgb(158, 208, 236);
+      margin-right: 6px;
+    }
+  }
+
+  //@@@@@@@@@@@@@@@@@
+
+  .right {
+    .main-right {
+      margin-top: 30px;
+      margin-right: 0px;
+      margin-left: 10px;
+      width: 230px;
+      height: 60px;
+
+      .rightTop {
+        display: flex;
+        .rightCenterProfile {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .explain {
+          font-size: 12px;
+          margin-left: 13px;
+          margin-top: 2px;
+
+          .explainUp {
+            margin-bottom: 0px;
+          }
+
+          .explainDw {
+            margin-top: 0px;
+            color: rgb(164, 164, 164);
+          }
+        }
+      }
+    }
+    .mainRightCenter {
+      overflow: hidden;
+      margin-right: 0px;
+      margin-left: 10px;
+      width: 230px;
+      height: 200px;
+      border-radius: 3px;
+      border: rgb(220, 220, 220) solid 1px;
+      background-color: white;
+
+      .rightCenterWrite {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .story {
+          color: rgb(140, 140, 140);
+          font-size: 13px;
+          margin-left: 10px;
+        }
+        .seeAll {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .rightWordCenter {
+      display: flex;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-left: 15px;
+
+      .rightCenterProfile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .explain {
+        font-size: 12px;
+        margin-left: 13px;
+        margin-top: 2px;
+
+        .explainUp {
+          margin-bottom: 0px;
+        }
+
+        .explainDw {
+          margin-top: 0px;
+          color: rgb(164, 164, 164);
+        }
+      }
+    }
+
+    .mainRightBottom {
+      overflow: hidden;
+      margin-top: 10px;
+      margin-right: 0px;
+      margin-left: 10px;
+      width: 230px;
+      height: 180px;
+      border-radius: 3px;
+      border: rgb(220, 220, 220) solid 1px;
+      background-color: white;
+
+      .rightCenterWrite {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        .story {
+          color: rgb(140, 140, 140);
+          font-size: 13px;
+          margin-left: 10px;
+        }
+        .seeAll {
+          font-size: 14px;
+          margin-right: 10px;
+        }
+      }
+
+      .follow {
+        position: absolute;
+        margin-left: 170px;
+        margin-top: -14px;
+        width: 100px;
+        font-size: 13px;
+        font-weight: bolder;
+
+        .followText {
+          margin-top: 10px;
+          padding: 11px;
+          color: rgb(89, 153, 234);
+        }
+      }
+
+      .rightWordCenter {
+        display: flex;
+        margin-left: 15px;
+        .rightCenterProfile {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+        .explain {
+          font-size: 12px;
+          margin-left: 13px;
+          margin-top: 2px;
+
+          .explainUp {
+            margin-bottom: 0px;
+          }
+
+          .explainDw {
+            margin-top: 0px;
+            color: rgb(164, 164, 164);
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  text-align: center;
+}
+
+form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}

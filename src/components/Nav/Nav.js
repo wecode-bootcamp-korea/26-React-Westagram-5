@@ -9,7 +9,7 @@ class Nav extends React.Component {
         <nav>
           <div className="logo">
             <div>
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram" />
             </div>
             <div className="wefont">
               <h3 className="we">
@@ -23,9 +23,9 @@ class Nav extends React.Component {
           </div>
 
           <div className="nav">
-            <div className="navo"></div>
-            <div className="navt"></div>
-            <div className="navh"></div>
+            <div className="navo" />
+            <div className="navt" />
+            <div className="navh" />
           </div>
         </nav>
       </header>

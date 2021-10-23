@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .login {
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+  }
+  a:hover {
+    color: none;
+  }
+  a:active {
+    color: none;
+  }
+
   width: 700px;
   margin: 8rem auto;
   padding: 5rem 0;
@@ -63,7 +75,7 @@
     text-align: center;
     margin-top: 8rem;
 
-    p a {
+    a {
       color: #0e527cfd;
       font-weight: bolder;
     }

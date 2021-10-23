@@ -41,9 +41,7 @@ class MainJihoo extends React.Component {
                 </a>
               </div>
               <div className="underight">
-                <a>
-                  <i className="far fa-bookmark" />
-                </a>
+                <i className="far fa-bookmark" />
               </div>
             </div>
             <div className="peedunderlikes">
@@ -62,8 +60,8 @@ class MainJihoo extends React.Component {
             </div>
             <div className="peedtext">
               <p className="canon">
-                <a href="#">canon_mj</a> 위워크에서 진행한 베이킹 클래스...
-                <a> 더 보기</a>
+                <a href="#">Cello_daily.0</a> 넌 그냥 항상 이뿨,,, 내사랑...
+                <span> 더 보기</span>
               </p>
               <div className="id2flexbox">
                 <p className="id2">

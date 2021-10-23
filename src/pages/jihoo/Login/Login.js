@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './Login.scss';
-// import '../../styles/Common.scss';
 
 class LoginJihoo extends React.Component {
   goMain = () => {
-    this.props.history.push('/main');
+    this.props.history.push('/main-jihoo');
   };
   render() {
     return (

@@ -12,33 +12,31 @@ class MainJihoo extends React.Component {
             <div className="top">
               <div className="toplogo">
                 <div className="topimg">
-                  <a>
-                    <img
-                      src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <img
+                    src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
+                    alt=""
+                  />
                 </div>
                 <h4 className="memberid">
-                  <a>Cello_daily.0</a>
+                  <span>Cello_daily.0</span>
                 </h4>
               </div>
-              <a>
+              <span>
                 <i className="fas fa-ellipsis-h" />
-              </a>
+              </span>
             </div>
             <div className="peedimg" />
             <div className="peedundericons">
               <div className="underleft">
-                <a>
+                <span>
                   <i className="fas fa-heart" />
-                </a>
-                <a>
+                </span>
+                <span>
                   <i className="far fa-comment" />
-                </a>
-                <a>
+                </span>
+                <span>
                   <i className="fas fa-external-link-alt" />
-                </a>
+                </span>
               </div>
               <div className="underight">
                 <i className="far fa-bookmark" />
@@ -46,34 +44,33 @@ class MainJihoo extends React.Component {
             </div>
             <div className="peedunderlikes">
               <div className="likesleft">
-                <a>
+                <div>
                   <img
                     src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
                     alt=""
                   />
-                </a>
+                </div>
                 <p>
-                  <a href="#">cookies</a>님 외<a href="#"> 10명이</a>{' '}
-                  &nbsp;좋아합니다
+                  <span>cookies</span>님 외<span> 10명이</span> 좋아합니다
                 </p>
               </div>
             </div>
             <div className="peedtext">
               <p className="canon">
-                <a href="#">Cello_daily.0</a> 넌 그냥 항상 이뿨,,, 내사랑...
+                <div>Cello_daily.0</div> 넌 그냥 항상 이뿨,,, 내사랑...
                 <span> 더 보기</span>
               </p>
               <div className="id2flexbox">
                 <p className="id2">
-                  <a href="#">neceosecius</a> 거봐 좋았잖아~~~ 🌝 🌝
+                  <div>neceosecius</div> 거봐 좋았잖아~~~ 🌝 🌝
                 </p>
-                <a>
+                <div>
                   <i className="far fa-heart" />
-                </a>
+                </div>
               </div>
               <span className="minit">
                 <p>
-                  <a href="#">42분 전</a>
+                  <div>42분 전</div>
                 </p>
               </span>
               <ul id="commentLists">

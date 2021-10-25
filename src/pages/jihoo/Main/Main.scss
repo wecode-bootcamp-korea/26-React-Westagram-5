@@ -49,7 +49,7 @@ body {
     }
 
     .memberid {
-      a {
+      span {
         margin-top: 15px;
         margin-left: 15px;
         color: black;
@@ -82,7 +82,8 @@ body {
       width: 96%;
       display: flex;
       padding-left: 3px;
-      a {
+
+      span {
         display: block;
         font-size: 1.5rem;
         margin-left: 13px;
@@ -126,7 +127,12 @@ body {
         margin-left: 8px;
         font-weight: normal;
 
-        a {
+        span {
+          font-weight: 800;
+          font-size: 0.9rem;
+        }
+
+        div {
           color: black;
           font-weight: 800;
         }
@@ -143,14 +149,17 @@ body {
       margin-bottom: 3px;
       color: black;
       font-weight: normal;
+      display: flex;
 
-      &:first-child a {
+      &:first-child div {
         font-weight: 800;
+        margin-right: 10px;
       }
 
       span {
         color: rgb(145, 145, 145);
         font-weight: normal;
+        margin-left: 10px;
       }
     }
 
@@ -160,9 +169,11 @@ body {
       display: flex;
       p {
         width: 96%;
+        display: flex;
 
-        &:first-child a {
+        &:first-child div {
           font-weight: 800;
+          margin-right: 14px;
         }
       }
       & > :nth-child(2) {
@@ -173,7 +184,7 @@ body {
     }
 
     .minit {
-      a {
+      div {
         color: rgb(153, 153, 153);
         font-weight: normal;
       }

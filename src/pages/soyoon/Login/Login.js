@@ -13,11 +13,15 @@ class LoginSoyoon extends React.Component {
   }
 
   handleIdInput = e => {
-    this.setState({ idValue: e.target.value });
+    this.setState({
+      idValue: e.target.value,
+    });
   };
 
-  handlPwInput = e => {
-    this.setState({ pwValue: e.target.value });
+  handlePwInput = e => {
+    this.setState({
+      pwValue: e.target.value,
+    });
   };
 
   goMain = () => {
@@ -25,6 +29,8 @@ class LoginSoyoon extends React.Component {
   };
 
   render() {
+    console.log(this.state.idValue);
+    console.log(this.state.pwValue);
     return (
       <div className="Login">
         <section className="login-name">
@@ -45,7 +51,22 @@ class LoginSoyoon extends React.Component {
               onChange={this.handlePwInput}
             />
           </div>
-          <button onClick={this.goMain} type="submit" id="login-btn">
+          <button
+            type="button"
+            className={
+              this.state.idValue.indexOf('@') !== -1 &&
+              this.state.pwValue.length > 5
+                ? 'changeButton'
+                : 'normalButton'
+            }
+            disabled={
+              this.state.idValue.indexOf('@') !== -1 &&
+              this.state.pwValue.length > 5
+                ? false
+                : true
+            }
+            onClick={this.goMain}
+          >
             로그인
           </button>
         </div>

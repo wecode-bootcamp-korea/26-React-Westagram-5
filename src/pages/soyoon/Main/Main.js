@@ -16,7 +16,10 @@ class MainSoyoon extends React.Component {
                 </div>
               </div>
               <div className="feeds-head-right">
-                <img src="https://cdn1.iconfinder.com/data/icons/jumpicon-basic-ui-glyph-1/32/-_Dot-More-Option-Menu-1024.png" />
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/jumpicon-basic-ui-glyph-1/32/-_Dot-More-Option-Menu-1024.png"
+                  alt="dot"
+                />
               </div>
             </div>
             <div className="feeds-img" />

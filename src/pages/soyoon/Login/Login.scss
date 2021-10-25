@@ -19,7 +19,7 @@ body {
         font-family: 'Lobster', cursive;
         color: #262626;
         font-size: 4rem;
-  line-height: 4rem;
+        line-height: 4rem;
       }
     }
 
@@ -48,7 +48,7 @@ body {
         margin-bottom: 2rem;
       }
 
-      #login-btn {
+      .normalButton {
         width: 100%;
         padding: 1rem;
         background: #c4e1fb;
@@ -56,12 +56,19 @@ body {
         border-radius: 5px;
         font-size: 1.3rem;
         transition: 0.3s;
-        border:none;
+        border: none;
+      }
 
-        &:hover {
-          background: #0096f6;
-          cursor: pointer;
-        }
+      .changeButton {
+        width: 100%;
+        padding: 1rem;
+        background: #0096f6;
+        color: white;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        transition: 0.3s;
+        border: none;
+        cursor: pointer;
       }
     }
 

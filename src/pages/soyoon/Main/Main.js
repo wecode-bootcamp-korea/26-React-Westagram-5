@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.scss';
+import { Link } from 'react-router-dom';
 
 class MainSoyoon extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class MainSoyoon extends React.Component {
           <section className="feeds">
             <div className="feeds-head">
               <div className="feeds-head-left">
-                <div className="feeds-head-img"></div>
+                <div className="feeds-head-img" />
                 <div className="feeds-head-name">
                   <p>eenooyos</p>
                 </div>
@@ -18,42 +19,41 @@ class MainSoyoon extends React.Component {
                 <img src="https://cdn1.iconfinder.com/data/icons/jumpicon-basic-ui-glyph-1/32/-_Dot-More-Option-Menu-1024.png" />
               </div>
             </div>
-            <div className="feeds-img"></div>
+            <div className="feeds-img" />
             <div className="feeds-img-int">
               <div className="feeds-img-nav">
                 <div className="img-nav-wrapper">
                   <div className="heart">
-                    <i className="far fa-heart"></i>
+                    <i className="far fa-heart" />
                   </div>
                   <div className="bubble">
-                    <i className="far fa-comment"></i>
+                    <i className="far fa-comment" />
                   </div>
                   <div>
-                    <i className="far fa-paper-plane"></i>
+                    <i className="far fa-paper-plane" />
                   </div>
                 </div>
                 <div>
                   <div className="img-nav-wrapper">
-                    <i className="far fa-bookmark"></i>
+                    <i className="far fa-bookmark" />
                   </div>
                 </div>
               </div>
               <div className="feeds-img-re">
                 <div className="feeds-img-like">
-                  <div className="like-img"></div>
+                  <div className="like-img" />
                   <div className="like-img-ex">
                     <p>
-                      <a href="#">S2minjeong</a>님 <a href="#">외 23명</a>이
-                      좋아합니다.
+                      <Link to="/main-soyoon">S2minjeong</Link>님&nbsp;
+                      <Link to="/main-soyoon">외 23명</Link>이 좋아합니다.
                     </p>
                   </div>
                 </div>
-
                 <div className="feeds-commit">
                   <p>
-                    <a href="#" class="name">
+                    <Link to="/main-soyoon" class="name">
                       eenooyos
-                    </a>{' '}
+                    </Link>
                     아이고 두야.. 이렇게 하는거 맞는거... <span>더보기</span>
                   </p>
 
@@ -81,7 +81,7 @@ class MainSoyoon extends React.Component {
 
           <section id="side">
             <div className="side-account">
-              <div className="account-img"></div>
+              <div className="account-img" />
               <div className="account-img-ex">
                 <div>
                   <p>wecode_bootcamp</p>
@@ -98,7 +98,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>sanghyunboy</p>
@@ -107,7 +107,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>you_god</p>
@@ -116,7 +116,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>iamwindow</p>
@@ -126,7 +126,7 @@ class MainSoyoon extends React.Component {
 
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>sanghyunboy</p>
@@ -135,7 +135,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>you_god</p>
@@ -144,7 +144,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="story">
                 <div className="story-img">
-                  <div></div>
+                  <div />
                 </div>
                 <div className="story-img-ex">
                   <p>iamwindow</p>
@@ -159,7 +159,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="suggestion">
                 <div className="suggestion-left">
-                  <div className="suggestion-left-img"></div>
+                  <div className="suggestion-left-img" />
                   <div className="left-img-ex">
                     <p>sunghomayo</p>
                     <p>you_god님 외 2명이 팔...</p>
@@ -169,7 +169,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="suggestion">
                 <div className="suggestion-left">
-                  <div className="suggestion-left-img"></div>
+                  <div className="suggestion-left-img" />
                   <div className="left-img-ex">
                     <p>zeehoojoah</p>
                     <p>yeonjeongzzang님 외...</p>
@@ -179,7 +179,7 @@ class MainSoyoon extends React.Component {
               </div>
               <div className="suggestion">
                 <div className="suggestion-left">
-                  <div className="suggestion-left-img"></div>
+                  <div className="suggestion-left-img" />
                   <div className="left-img-ex">
                     <p>boradori_</p>
                     <p>iamwindow님 외 1명이...</p>

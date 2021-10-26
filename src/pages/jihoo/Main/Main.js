@@ -3,8 +3,44 @@ import '../../../styles/common.scss';
 import './Main.scss';
 
 class MainJihoo extends React.Component {
-  // js
+  constructor() {
+    super();
+    this.state = {
+      newReply: '',
+      replies: [
+        {
+          text: '',
+        },
+      ],
+    };
+  }
+
+  textChange = e => {
+    this.setState({
+      newReply: e.target.value,
+    });
+  };
+
+  add = () => {
+    let arr = this.state.replies;
+    arr.push({
+      text: this.state.newReply,
+    });
+    this.setState({
+      replies: arr,
+      newReply: '',
+    });
+  };
+
+  pressEnter = e => {
+    if (e.key === 'Enter' && this.state.newReply) {
+      this.add();
+      e.target.value = '';
+    }
+  };
+
   render() {
+    console.log(this.state.replies);
     return (
       <div className="main">
         <article>
@@ -12,84 +48,83 @@ class MainJihoo extends React.Component {
             <div className="top">
               <div className="toplogo">
                 <div className="topimg">
-                  <a>
-                    <img
-                      src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <h4 className="memberid">
-                  <a>Cello_daily.0</a>
-                </h4>
-              </div>
-              <a>
-                <i className="fas fa-ellipsis-h" />
-              </a>
-            </div>
-            <div className="peedimg" />
-            <div className="peedundericons">
-              <div className="underleft">
-                <a>
-                  <i className="fas fa-heart" />
-                </a>
-                <a>
-                  <i className="far fa-comment" />
-                </a>
-                <a>
-                  <i className="fas fa-external-link-alt" />
-                </a>
-              </div>
-              <div className="underight">
-                <a>
-                  <i className="far fa-bookmark" />
-                </a>
-              </div>
-            </div>
-            <div className="peedunderlikes">
-              <div className="likesleft">
-                <a>
                   <img
                     src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
                     alt=""
                   />
-                </a>
+                </div>
+                <h4 className="memberid">
+                  <span>Cello_daily.0</span>
+                </h4>
+              </div>
+              <span>
+                <i className="fas fa-ellipsis-h" />
+              </span>
+            </div>
+            <div className="peedimg" />
+            <div className="peedundericons">
+              <div className="underleft">
+                <span>
+                  <i className="fas fa-heart" />
+                </span>
+                <span>
+                  <i className="far fa-comment" />
+                </span>
+                <span>
+                  <i className="fas fa-external-link-alt" />
+                </span>
+              </div>
+              <div className="underight">
+                <i className="far fa-bookmark" />
+              </div>
+            </div>
+            <div className="peedunderlikes">
+              <div className="likesleft">
+                <div>
+                  <img
+                    src="https://i.ibb.co/CQGw903/Kakao-Talk-Image-2021-10-14-18-01-43.jpg"
+                    alt=""
+                  />
+                </div>
                 <p>
-                  <a href="#">cookies</a>님 외<a href="#"> 10명이</a>{' '}
-                  &nbsp;좋아합니다
+                  <span>cookies</span>님 외<span> 10명이</span> 좋아합니다
                 </p>
               </div>
             </div>
             <div className="peedtext">
               <p className="canon">
-                <a href="#">canon_mj</a> 위워크에서 진행한 베이킹 클래스...
-                <a> 더 보기</a>
+                <div>Cello_daily.0</div> 넌 그냥 항상 이뿨,,, 내사랑...
+                <span> 더 보기</span>
               </p>
               <div className="id2flexbox">
                 <p className="id2">
-                  <a href="#">neceosecius</a> 거봐 좋았잖아~~~ 🌝 🌝
+                  <div>neceosecius</div> 거봐 좋았잖아~~~ 🌝 🌝
                 </p>
-                <a>
+                <div>
                   <i className="far fa-heart" />
-                </a>
+                </div>
               </div>
               <span className="minit">
                 <p>
-                  <a href="#">42분 전</a>
+                  <div>42분 전</div>
                 </p>
               </span>
               <ul id="commentLists">
-                <li />
+                {this.state.replies.map(el => (
+                  <li>{el.text}</li>
+                ))}
               </ul>
             </div>
             <div className="comment">
               <input
                 id="name"
-                class="names"
                 type="text"
                 placeholder="댓글 달기..."
+                onChange={this.textChange}
+                onKeyUp={this.pressEnter}
+                value={this.state.newReply}
               />
-              <button className="upload" id="submit">
+              <button className="upload" id="submit" onClick={this.add}>
                 게시
               </button>
             </div>

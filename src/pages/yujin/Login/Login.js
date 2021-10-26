@@ -2,6 +2,26 @@ import React from 'react';
 import './Login.scss';
 
 class LoginYujin extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      idInputValue: '',
+      pwInputValue: '',
+    };
+  }
+
+  handleIdInput = event => {
+    this.setState({
+      idInputValue: `${event.target.value}`,
+    });
+  };
+
+  handlePwInput = event => {
+    this.setState({
+      pwInputValue: `${event.target.value}`,
+    });
+  };
+
   render() {
     return (
       <section className="login">
@@ -12,6 +32,7 @@ class LoginYujin extends React.Component {
               id="id"
               type="text"
               placeholder="전화번호,사용자이름 또는 이메일"
+              onChange={this.handleIdInput}
             />
             <input id="password" type="password" placeholder="비밀번호" />
           </div>

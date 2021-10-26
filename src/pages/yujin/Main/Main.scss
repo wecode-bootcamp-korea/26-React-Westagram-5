@@ -3,7 +3,7 @@ body {
 }
 
 .main {
-  a:link {
+  span:link {
     color: #666;
     text-decoration: none;
   }
@@ -49,7 +49,7 @@ body {
     }
 
     .memberid {
-      a {
+      div {
         margin-top: 15px;
         margin-left: 15px;
         color: black;
@@ -80,7 +80,8 @@ body {
       width: 96%;
       display: flex;
       padding-left: 3px;
-      a {
+
+      div {
         display: block;
         font-size: 1.5rem;
         margin-left: 13px;
@@ -89,7 +90,7 @@ body {
     }
 
     .underight {
-      a {
+      div {
         display: block;
         font-size: 1.2rem;
         color: srgb(145, 145, 145);
@@ -106,6 +107,7 @@ body {
 
     .fa-bookmark {
       font-size: 1.4rem;
+      color: silver;
     }
 
     .likesleft {
@@ -121,7 +123,7 @@ body {
         padding-top: 5px;
         margin-left: 8px;
         font-weight: normal;
-        a {
+        span {
           color: black;
           font-weight: 800;
         }
@@ -153,7 +155,7 @@ body {
     }
 
     .minit {
-      a {
+      span {
         color: rgb(153, 153, 153);
         font-weight: normal;
       }

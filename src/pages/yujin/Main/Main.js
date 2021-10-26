@@ -12,68 +12,67 @@ class MainYujin extends React.Component {
             <div className="top">
               <div className="toplogo">
                 <div className="topimg">
-                  <a>
+                  <span>
                     <img src="https://i.ibb.co/t3FPjGR/IMG-5767.jpg" alt="" />
-                  </a>
+                  </span>
                 </div>
                 <h4 className="memberid">
-                  <a>subakida__</a>
+                  <div>subakida__</div>
                 </h4>
               </div>
-              <a>
+              <div>
                 <i className="fas fa-ellipsis-h" />
-              </a>
+              </div>
             </div>
             <div className="peedimg" />
             <div className="peedundericons">
               <div className="underleft">
-                <a>
+                <div>
                   <i className="fas fa-heart" />
-                </a>
-                <a>
+                </div>
+                <div>
                   <i className="far fa-comment" />
-                </a>
-                <a>
+                </div>
+                <div>
                   <i className="fas fa-external-link-alt" />
-                </a>
+                </div>
               </div>
               <div className="underight">
-                <a>
+                <div>
                   <i className="far fa-bookmark" />
-                </a>
+                </div>
               </div>
             </div>
             <div className="peedunderlikes">
               <div className="likesleft">
-                <a>
-                  <img
-                    src="https://i.ibb.co/jJvsMKy/beauty-1602408542301.jpg"
-                    alt=""
-                  />
-                </a>
+                <img
+                  src="https://i.ibb.co/jJvsMKy/beauty-1602408542301.jpg"
+                  alt=""
+                />
+
                 <p>
-                  <a href="#">newjiiny__</a>님 외<a href="#"> 30명이</a>{' '}
+                  <span href="#">newjiiny__</span>님 외<a href="#"> 30명이</a>{' '}
                   &nbsp;좋아합니다
                 </p>
               </div>
             </div>
             <div className="peedtext">
               <p className="canon">
-                <a href="#">subakida__</a> 누나 데릴러 온 신수박~~
+                <span href="#">subakida__</span> 누나 데릴러 온 신수박~~
               </p>
               <div className="id2flexbox">
                 <p className="id2">
-                  <a href="#">newjiiny__</a> 귀여운 슈바기~~~ 🌝
+                  <span href="#">newjiiny__</span> 귀여운 슈바기~~~ 🌝
                 </p>
-                <a>
+                <div>
                   <i className="far fa-heart" />
-                </a>
+                </div>
               </div>
-              <span className="minit">
+              <div className="minit">
                 <p>
-                  <a href="#">4분 전</a>
+                  <span href="#">4분 전</span>
                 </p>
-              </span>
+              </div>
               <ul id="commentLists">
                 <li />
               </ul>

@@ -3,72 +3,44 @@ import '../../../styles/common.scss';
 import './Main.scss';
 
 class MainJihoo extends React.Component {
-  // handleInputValue = event => {
-  //   this.setState(
-  //     {
-  //       commentValue: event.target.value,
-  //     },
-  //     () => this.handleActivation(event)
-  //   );
-  // };
-
-  // handleActivation = event => {
-  //   const isValidate = this.state.commentValue.length > 1;
-  //   const pressEnter = event.key === 'Enter';
-  //   this.setState(
-  //     {
-  //       submitBtnColor: isValidate ? '#385185' : 'rgba(0, 149, 246, 0.3)',
-  //     },
-  //     () => pressEnter && this.addComment(event)
-  //   );
-  // };
-
-  // addComment = event => {
-  //   const { commentValue, commentLine } = this.state;
-  //   commentValue &&
-  //     this.setState({
-  //       submitBtnColor: 'rgba(0, 149, 246, 0.3)',
-  //       commentLine: [
-  //         ...commentLine,
-  //         {
-  //           id: commentLine.length,
-  //           userName: 'jesiki',
-  //           content: commentValue,
-  //         },
-  //       ],
-  //       commentValue: '',
-  //     });
-  // };
   constructor() {
     super();
-
     this.state = {
-      commentList: [],
-      commentText: '',
-      userId: 'dkfjlseij',
+      newReply: '',
+      replies: [
+        {
+          text: '',
+        },
+      ],
     };
   }
 
-  commentState = event => {
-    this.setState(
-      {
-        commentText: event.target.value,
-      },
-      () => console.log('commentText', this.state.commentText)
-    );
-  };
-
-  commentAdd = () => {
-    const commentText = this.state.commentText;
-    const commentArr = [];
-    this.state.commentList.push(commentText);
+  textChange = e => {
     this.setState({
-      commentList: this.state.commentList,
-      commentText: '',
+      newReply: e.target.value,
     });
   };
 
+  add = () => {
+    let arr = this.state.replies;
+    arr.push({
+      text: this.state.newReply,
+    });
+    this.setState({
+      replies: arr,
+      newReply: '',
+    });
+  };
+
+  pressEnter = e => {
+    if (e.key === 'Enter' && this.state.newReply) {
+      this.add();
+      e.target.value = '';
+    }
+  };
+
   render() {
+    console.log(this.state.replies);
     return (
       <div className="main">
         <article>
@@ -138,7 +110,9 @@ class MainJihoo extends React.Component {
                 </p>
               </span>
               <ul id="commentLists">
-                <li />
+                {this.state.replies.map(el => (
+                  <li>{el.text}</li>
+                ))}
               </ul>
             </div>
             <div className="comment">
@@ -146,15 +120,11 @@ class MainJihoo extends React.Component {
                 id="name"
                 type="text"
                 placeholder="댓글 달기..."
-                onChange={this.commentState}
-                onKeyPress={event => {
-                  if (event.key === 'Enter') {
-                    this.commentAdd();
-                  }
-                }}
-                value={this.state.commentText}
+                onChange={this.textChange}
+                onKeyUp={this.pressEnter}
+                value={this.state.newReply}
               />
-              <button className="upload" id="submit" onClick={this.commentAdd}>
+              <button className="upload" id="submit" onClick={this.add}>
                 게시
               </button>
             </div>

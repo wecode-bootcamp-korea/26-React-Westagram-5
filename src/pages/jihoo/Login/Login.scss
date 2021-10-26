@@ -61,12 +61,7 @@
       font-size: 22px;
       color: white;
       font-weight: bolder;
-      background-color: #0098f63d;
       border: none;
-
-      &:hover {
-        background-color: #0096f6;
-      }
     }
   }
 
@@ -80,4 +75,12 @@
       font-weight: bolder;
     }
   }
+}
+
+.changeButtonColor {
+  background-color: rgb(102, 176, 240);
+}
+
+.normalButtonColor {
+  background-color: rgba(102, 176, 240, 0.548);
 }

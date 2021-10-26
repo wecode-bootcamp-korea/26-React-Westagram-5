@@ -3,7 +3,71 @@ import '../../../styles/common.scss';
 import './Main.scss';
 
 class MainJihoo extends React.Component {
-  // js
+  // handleInputValue = event => {
+  //   this.setState(
+  //     {
+  //       commentValue: event.target.value,
+  //     },
+  //     () => this.handleActivation(event)
+  //   );
+  // };
+
+  // handleActivation = event => {
+  //   const isValidate = this.state.commentValue.length > 1;
+  //   const pressEnter = event.key === 'Enter';
+  //   this.setState(
+  //     {
+  //       submitBtnColor: isValidate ? '#385185' : 'rgba(0, 149, 246, 0.3)',
+  //     },
+  //     () => pressEnter && this.addComment(event)
+  //   );
+  // };
+
+  // addComment = event => {
+  //   const { commentValue, commentLine } = this.state;
+  //   commentValue &&
+  //     this.setState({
+  //       submitBtnColor: 'rgba(0, 149, 246, 0.3)',
+  //       commentLine: [
+  //         ...commentLine,
+  //         {
+  //           id: commentLine.length,
+  //           userName: 'jesiki',
+  //           content: commentValue,
+  //         },
+  //       ],
+  //       commentValue: '',
+  //     });
+  // };
+  constructor() {
+    super();
+
+    this.state = {
+      commentList: [],
+      commentText: '',
+      userId: 'dkfjlseij',
+    };
+  }
+
+  commentState = event => {
+    this.setState(
+      {
+        commentText: event.target.value,
+      },
+      () => console.log('commentText', this.state.commentText)
+    );
+  };
+
+  commentAdd = () => {
+    const commentText = this.state.commentText;
+    const commentArr = [];
+    this.state.commentList.push(commentText);
+    this.setState({
+      commentList: this.state.commentList,
+      commentText: '',
+    });
+  };
+
   render() {
     return (
       <div className="main">
@@ -80,11 +144,17 @@ class MainJihoo extends React.Component {
             <div className="comment">
               <input
                 id="name"
-                class="names"
                 type="text"
                 placeholder="댓글 달기..."
+                onChange={this.commentState}
+                onKeyPress={event => {
+                  if (event.key === 'Enter') {
+                    this.commentAdd();
+                  }
+                }}
+                value={this.state.commentText}
               />
-              <button className="upload" id="submit">
+              <button className="upload" id="submit" onClick={this.commentAdd}>
                 게시
               </button>
             </div>

@@ -29,17 +29,31 @@ class LoginSungho extends React.Component {
         <form action="" id="loginForm">
           <input
             onChange={this.handleIdInput}
-            class="id"
+            className="id"
             type="text"
+            value={this.state.idValue}
             placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input
             onChange={this.handlePwInput}
-            class="pw"
+            className="pw"
             type="password"
+            value={this.state.pwValue}
             placeholder="비밀번호"
           />
-          <button class="button" type="button" disabled>
+          <button
+            className={
+              this.state.idValue.includes('@') && this.state.pwValue.length > 4
+                ? 'buttonAble'
+                : 'buttonDisable'
+            }
+            type="button"
+            disabled={
+              this.state.idValue.includes('@') && this.state.pwValue.length > 4
+                ? false
+                : true
+            }
+          >
             로그인{' '}
           </button>
         </form>

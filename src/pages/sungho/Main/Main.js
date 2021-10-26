@@ -1,9 +1,6 @@
 import React from 'react';
 import './Main.scss';
 
-//https://ibb.co/J2HpHXG - bigCat
-//https://ibb.co/mcJcskp - cat
-
 class Mainsungho extends React.Component {
   render() {
     return (

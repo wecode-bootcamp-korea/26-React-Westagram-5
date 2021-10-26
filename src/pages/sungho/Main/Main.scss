@@ -85,6 +85,7 @@
         }
       }
     }
+
     .comment {
       margin-top: 40px;
 
@@ -152,6 +153,7 @@
 
       .rightTop {
         display: flex;
+
         .rightCenterProfile {
           width: 40px;
           height: 40px;
@@ -174,6 +176,7 @@
         }
       }
     }
+
     .mainRightCenter {
       overflow: hidden;
       margin-right: 0px;
@@ -188,6 +191,7 @@
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+
         .story {
           color: rgb(140, 140, 140);
           font-size: 13px;
@@ -242,11 +246,13 @@
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
+
         .story {
           color: rgb(140, 140, 140);
           font-size: 13px;
           margin-left: 10px;
         }
+
         .seeAll {
           font-size: 14px;
           margin-right: 10px;
@@ -271,11 +277,13 @@
       .rightWordCenter {
         display: flex;
         margin-left: 15px;
+
         .rightCenterProfile {
           width: 40px;
           height: 40px;
           border-radius: 50%;
         }
+
         .explain {
           font-size: 12px;
           margin-left: 13px;

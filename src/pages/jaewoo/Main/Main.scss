@@ -1,0 +1,178 @@
+//main start
+* {
+  color: black;
+}
+i {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.mainBox1 {
+  border-top: 1px solid lightgrey;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Box1Section {
+  border-top: 1px solid lightgrey;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.profileBox {
+  margin-left: 250px;
+  width: 550px;
+  margin-top: 20px;
+  border: 1px solid lightgrey;
+  background-color: white;
+
+  .viewName {
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+  }
+  .userName {
+    margin-left: 10px;
+  }
+  .viewPicture {
+    width: 550px;
+  }
+  .viewPicture img {
+    width: 100%;
+  }
+  .followingBox {
+    display: flex;
+    border-top: 1px solid lightgrey;
+    justify-content: space-between;
+
+    .leftSection {
+      overflow: hidden;
+    }
+  }
+
+  .rightSection {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .commentViewBox {
+    border-bottom: 1px solid #efefef;
+    padding-top: 5px;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+  }
+
+  .commentBox {
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.viewName img {
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #efefef;
+}
+
+.leftSection i {
+  margin-left: 10px;
+}
+
+.comment {
+  width: 400px;
+}
+
+//main end
+//sidebar start
+
+.rightProfile {
+  margin-left: 0px;
+  margin-right: 300px;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .rightBox {
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+
+    .pid {
+      margin-left: 10px;
+      border-radius: 50%;
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .rightBox2 {
+    background-color: white;
+    display: border;
+    margin-top: 10px;
+    width: 300px;
+    height: 2000px;
+    border: 1px solid lightgrey;
+  }
+  .rightBox1 {
+    background-color: white;
+    display: border;
+    margin: 20px;
+    width: 300px;
+    height: 140px;
+    border: 1px solid lightgrey;
+
+    .recommendSection {
+      display: block;
+      align-items: center;
+      flex-direction: center;
+      justify-content: space-between;
+    }
+    .personView {
+      display: flex;
+      justify-content: flex-start;
+      width: 300px;
+      height: 40px;
+    }
+  }
+  .plus {
+    margin-left: 10px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+  .why {
+    height: 40px;
+  }
+  .why1 {
+    justify-content: space-between;
+  }
+  .commnetPlus {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//fixed
+.buttonWrapper {
+  display: flex;
+
+  .commnetText {
+    width: 100%;
+  }
+  // .comment-Press {
+  //   width: 100%;
+  // }
+}

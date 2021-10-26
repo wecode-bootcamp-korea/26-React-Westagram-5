@@ -61,7 +61,7 @@ body {
   .btn {
     width: 507px;
     height: 50px;
-    background-color: #90a0af;
+    // background-color: #90a0af;
     color: #fdfeff;
     align-items: center;
     flex-direction: center;
@@ -77,4 +77,11 @@ body {
   font-size: 10px;
   margin-bottom: 100px;
   font-size: 20px;
+}
+
+.changeButtonColor {
+  background-color: rgb(87, 154, 180);
+}
+.noramlButtonColor {
+  background-color: lightblue;
 }

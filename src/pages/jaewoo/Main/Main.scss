@@ -60,11 +60,10 @@ i {
   }
 
   .commentViewBox {
-    display: flex;
-    padding-left: 20px;
     border-bottom: 1px solid #efefef;
     padding-top: 5px;
     border-top: 1px solid lightgrey;
+    width: 100%;
   }
 
   .commentBox {
@@ -166,4 +165,14 @@ i {
   }
 }
 
-//sidebar end
+//fixed
+.buttonWrapper {
+  display: flex;
+
+  .commnetText {
+    width: 100%;
+  }
+  // .comment-Press {
+  //   width: 100%;
+  // }
+}

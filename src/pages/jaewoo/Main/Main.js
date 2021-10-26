@@ -1,5 +1,7 @@
 import React from 'react';
+import Comment from './comment/comment';
 import './Main.scss';
+import '../Main/comment/comment';
 
 class MainJaewoo extends React.Component {
   render() {
@@ -27,16 +29,7 @@ class MainJaewoo extends React.Component {
                       <i className="far fa-bookmark" />
                     </div>
                   </div>
-                  <div className="commentViewBox">
-                    jo_original
-                    <br />
-                    ohyoun
-                    <br />
-                  </div>
-                  <div className="commentBox">
-                    <input className="comment" placeholder="댓글입력" />
-                    <button className="coMmnetbutton" />
-                  </div>
+                  <Comment />
                 </div>
 
                 <div className="rightProfile">

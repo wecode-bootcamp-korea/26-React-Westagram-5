@@ -41,7 +41,7 @@
       }
     }
 
-    .btn {
+    button {
       width: 500px;
       border-radius: 8px;
       padding: 16px 12px;
@@ -51,10 +51,12 @@
       font-weight: bolder;
       background-color: #0098f63d;
       border: none;
-
-      &:hover {
-        background-color: #0096f6;
-      }
+    }
+    .changeButtonColor {
+      background-color: #5ca7ee;
+    }
+    .normalButtonColor {
+      background-color: #b8daf9;
     }
   }
 

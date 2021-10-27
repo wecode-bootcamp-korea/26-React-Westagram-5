@@ -12,13 +12,13 @@ class LoginYujin extends React.Component {
 
   handleIdInput = event => {
     this.setState({
-      idInputValue: `${event.target.value}`,
+      idInputValue: event.target.value,
     });
   };
 
   handlePwInput = event => {
     this.setState({
-      pwInputValue: `${event.target.value}`,
+      pwInputValue: event.target.value,
     });
   };
 
@@ -34,9 +34,29 @@ class LoginYujin extends React.Component {
               placeholder="전화번호,사용자이름 또는 이메일"
               onChange={this.handleIdInput}
             />
-            <input id="password" type="password" placeholder="비밀번호" />
+            <input
+              id="password"
+              type="password"
+              placeholder="비밀번호"
+              onChange={this.handlePwInput}
+            />
           </div>
-          <button onClick={this.goMain} className="btn" type="submit">
+          <button
+            className={
+              this.state.idInputValue.indexOf('@') !== -1 &&
+              this.state.pwInputValue.length > 5
+                ? 'changeButtonColor'
+                : 'normalButtonColor'
+            }
+            disabled={
+              this.state.idInputValue.indexOf('@') !== -1 &&
+              this.state.pwInputValue.length > 5
+                ? false
+                : true
+            }
+            onClick={this.goMain}
+            type="submit"
+          >
             로그인
           </button>
         </div>

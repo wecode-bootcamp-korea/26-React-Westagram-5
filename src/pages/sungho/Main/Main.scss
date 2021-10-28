@@ -113,7 +113,12 @@
 
       .commentWrite {
         list-style-type: none;
-        margin-left: -30px;
+        margin-left: -5px;
+        margin-top: 10px;
+
+        .commentId {
+          font-weight: bold;
+        }
       }
     }
 

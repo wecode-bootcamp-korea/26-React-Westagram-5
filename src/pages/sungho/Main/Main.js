@@ -1,7 +1,46 @@
 import React from 'react';
 import './Main.scss';
+import Child from './Child';
 
 class Mainsungho extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+      commentBox: [],
+    };
+  }
+
+  onInputChange = e => {
+    this.setState({
+      input: e.target.value,
+    });
+  };
+  commentUpdate = e => {
+    if (e.key === 'Enter' && this.state.input.length > 0) {
+      e.preventDefault();
+      const newCommentBox = this.state.commentBox.concat({
+        content: this.state.input,
+      });
+      this.updateComment(newCommentBox);
+    }
+  };
+  commentUpdateButton = e => {
+    if (this.state.input.length > 0) {
+      e.preventDefault();
+      const newCommentBox = this.state.commentBox.concat({
+        content: this.state.input,
+      });
+      this.updateComment(newCommentBox);
+    }
+  };
+
+  updateComment = newCommentBox => {
+    this.setState({
+      commentBox: newCommentBox,
+      input: '',
+    });
+  };
   render() {
     return (
       <>
@@ -71,17 +110,14 @@ class Mainsungho extends React.Component {
                   <span className="bord">10명</span>이 좋아합니다
                 </span>
               </div>
-              <div className="commentOut">
-                <ul className="commentWrite" />
-              </div>
-              <div className="commentBox">
-                <input
-                  className="commentIn"
-                  type="text"
-                  placeholder="댓글 달기..."
-                />
-                <button className="commentButton">게시</button>
-              </div>
+              <Child
+                input={this.state.input}
+                commentBox={this.state.commentBox}
+                onInputChange={this.onInputChange}
+                commentUpdate={this.commentUpdate}
+                commentUpdateButton={this.commentUpdateButton}
+                updateComment={this.updateComment}
+              />
             </div>
             <div className="right">
               <div className="main-right">

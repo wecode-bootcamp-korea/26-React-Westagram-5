@@ -25,12 +25,24 @@ class LoginSoyoon extends React.Component {
   };
 
   goMain = () => {
+    /*
+    fetch('http://10.58.2.0:8000/users/signup', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.idValue,
+        password: this.state.pwValue,
+        name: '',
+        telephone: '',
+        personal_information: '',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+*/
     this.props.history.push('main-soyoon');
   };
 
   render() {
-    console.log(this.state.idValue);
-    console.log(this.state.pwValue);
     return (
       <div className="Login">
         <section className="login-name">

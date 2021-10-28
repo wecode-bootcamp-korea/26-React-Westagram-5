@@ -48,10 +48,9 @@ body {
         margin-bottom: 2rem;
       }
 
-      .normalButton {
+      button {
         width: 100%;
         padding: 1rem;
-        background: #c4e1fb;
         color: white;
         border-radius: 5px;
         font-size: 1.3rem;
@@ -59,15 +58,12 @@ body {
         border: none;
       }
 
+      .normalButton {
+        background: #c4e1fb;
+      }
+
       .changeButton {
-        width: 100%;
-        padding: 1rem;
         background: #0096f6;
-        color: white;
-        border-radius: 5px;
-        font-size: 1.3rem;
-        transition: 0.3s;
-        border: none;
         cursor: pointer;
       }
     }

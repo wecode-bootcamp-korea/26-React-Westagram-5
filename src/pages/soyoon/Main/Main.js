@@ -3,6 +3,49 @@ import './Main.scss';
 import { Link } from 'react-router-dom';
 
 class MainSoyoon extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      newComment: '',
+      comments: [],
+    };
+  }
+
+  textChange = e => {
+    this.setState({
+      newComment: e.target.value,
+    });
+  };
+
+  add = () => {
+    let arr = this.state.comments;
+    if (this.state.newComment.length > 0) {
+      arr.push({
+        id: Date.now(),
+        text: this.state.newComment,
+      });
+    }
+
+    this.setState({
+      comments: arr,
+      newComment: '',
+    });
+  };
+
+  delete = e => {
+    const commentBox = [this.state.comments];
+    const filterBox = commentBox.filter(
+      comment => comment.id !== Number(e.target.className)
+    );
+    this.setState({ comments: filterBox });
+  };
+
+  pressEnter = e => {
+    if (e.key === 'Enter') {
+      this.add();
+    }
+  };
+
   render() {
     return (
       <main>
@@ -66,6 +109,19 @@ class MainSoyoon extends React.Component {
                       <span> 마라탕조아용😏</span>
                       <span class="delete"> x </span>
                     </li>
+                    {this.state.comments.map(el => (
+                      <li>
+                        <span className="name">{USER_NAME}</span>
+                        {el.text}
+                        <button
+                          className={this.state.newComment.id}
+                          onClick={this.delete}
+                        >
+                          {' '}
+                          x{' '}
+                        </button>
+                      </li>
+                    ))}
                   </ul>
 
                   <p>42분 전</p>
@@ -76,8 +132,13 @@ class MainSoyoon extends React.Component {
                   type="text"
                   placeholder="댓글 달기..."
                   id="commentInput"
+                  onChange={this.textChange}
+                  onKeyPress={this.pressEnter}
+                  value={this.state.newComment}
                 />
-                <button id="submit">게시</button>
+                <button id="submit" onClick={this.add}>
+                  게시
+                </button>
               </div>
             </div>
           </section>
@@ -222,3 +283,5 @@ class MainSoyoon extends React.Component {
 }
 
 export default MainSoyoon;
+
+const USER_NAME = 'eenooyos ';

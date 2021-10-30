@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 export class Comment extends Component {
   render() {
+    const { comments, deleteComment, textChange, pressEnter, newComment, add } =
+      this.props;
     return (
       <>
         <div className="feeds-commit">
@@ -20,12 +22,15 @@ export class Comment extends Component {
               <span class="delete"> x </span>
             </li>
 
-            {this.props.comments.map((el, id) => {
+            {comments.map((el, deleteId) => {
               return (
-                <li key={id}>
+                <li key={deleteId}>
                   <span className="name">{USER_NAME}</span>
                   <span>{el.text}</span>
-                  <span onClick={() => this.props.delete(id)} className="oogog">
+                  <span
+                    onClick={() => deleteComment(deleteId)}
+                    className="delete"
+                  >
                     x
                   </span>
                 </li>
@@ -40,11 +45,11 @@ export class Comment extends Component {
             type="text"
             placeholder="댓글 달기..."
             id="commentInput"
-            onChange={this.props.textChange}
-            onKeyPress={this.props.pressEnter}
-            value={this.props.newComment}
+            onChange={textChange}
+            onKeyPress={pressEnter}
+            value={newComment}
           />
-          <button id="submit" onClick={this.props.add}>
+          <button id="submit" onClick={add}>
             게시
           </button>
         </div>

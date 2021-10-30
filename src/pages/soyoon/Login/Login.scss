@@ -1,0 +1,89 @@
+body {
+  background: #fafafa;
+
+  .Login {
+    width: 600px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .login-name {
+      padding: 4rem 0;
+
+      h1 {
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        color: #262626;
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+    }
+
+    .login-wrapper {
+      width: 500px;
+      margin: 0 auto;
+
+      .login-input input {
+        width: 100%;
+        padding: 1.5rem;
+        background: #fafafa;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        font-size: 1.3rem;
+
+        &::placeholder {
+          font-size: 1.3rem;
+          color: #757575;
+        }
+      }
+      .login-input > :first-child {
+        margin-bottom: 1rem;
+      }
+
+      .login-input > :last-child {
+        margin-bottom: 2rem;
+      }
+
+      button {
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        transition: 0.3s;
+        border: none;
+      }
+
+      .normalButton {
+        background: #c4e1fb;
+      }
+
+      .changeButton {
+        background: #0096f6;
+        cursor: pointer;
+      }
+    }
+
+    .login-text {
+      padding: 10rem 0 3rem;
+
+      p {
+        font-size: 1.3rem;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+          color: #1a4776;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

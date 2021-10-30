@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.scss';
+import Comment from './Comment';
 import { Link } from 'react-router-dom';
 
 class MainSoyoon extends React.Component {
@@ -8,6 +9,7 @@ class MainSoyoon extends React.Component {
     this.state = {
       newComment: '',
       comments: [],
+      id: 0,
     };
   }
 
@@ -18,25 +20,25 @@ class MainSoyoon extends React.Component {
   };
 
   add = () => {
-    let arr = this.state.comments;
-    if (this.state.newComment.length > 0) {
-      arr.push({
-        id: Date.now(),
-        text: this.state.newComment,
-      });
-    }
+    const { newComment, comments, id } = this.state;
+
+    const arr = {
+      id: id,
+      text: newComment,
+    };
 
     this.setState({
-      comments: arr,
+      comments: comments.concat(arr),
       newComment: '',
+      id: id + 1,
     });
   };
 
-  delete = e => {
-    const commentBox = [this.state.comments];
-    const filterBox = commentBox.filter(
-      comment => comment.id !== Number(e.target.className)
-    );
+  delete = id => {
+    const { comments } = this.state;
+
+    const commentBox = comments;
+    const filterBox = commentBox.filter(el => el.id !== id);
     this.setState({ comments: filterBox });
   };
 
@@ -95,51 +97,15 @@ class MainSoyoon extends React.Component {
                     </p>
                   </div>
                 </div>
-                <div className="feeds-commit">
-                  <p>
-                    <Link to="/main-soyoon" class="name">
-                      eenooyos
-                    </Link>
-                    아이고 두야.. 이렇게 하는거 맞는거... <span>더보기</span>
-                  </p>
-
-                  <ul id="comment-wrapper">
-                    <li>
-                      <span className="name">yeonjeongzzang</span>
-                      <span> 마라탕조아용😏</span>
-                      <span class="delete"> x </span>
-                    </li>
-                    {this.state.comments.map(el => (
-                      <li>
-                        <span className="name">{USER_NAME}</span>
-                        {el.text}
-                        <button
-                          className={this.state.newComment.id}
-                          onClick={this.delete}
-                        >
-                          {' '}
-                          x{' '}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p>42분 전</p>
-                </div>
               </div>
-              <div id="comment">
-                <input
-                  type="text"
-                  placeholder="댓글 달기..."
-                  id="commentInput"
-                  onChange={this.textChange}
-                  onKeyPress={this.pressEnter}
-                  value={this.state.newComment}
-                />
-                <button id="submit" onClick={this.add}>
-                  게시
-                </button>
-              </div>
+              <Comment
+                newComment={this.state.newComment}
+                comments={this.state.comments}
+                textChange={this.textChange}
+                add={this.add}
+                delete={this.delete}
+                pressEnter={this.pressEnter}
+              />
             </div>
           </section>
 
@@ -283,5 +249,3 @@ class MainSoyoon extends React.Component {
 }
 
 export default MainSoyoon;
-
-const USER_NAME = 'eenooyos ';
